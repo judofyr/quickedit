@@ -45,6 +45,16 @@ To:
 
 **You're done! Visit the page in your browser.**
 
+
+Automatic escaping
+------------------
+
+Quickedit will automatically escape the value (unless it's already been marked
+HTML safe). If you want to output the raw HTML please use the #raw method:
+
+    <h2><%= quickedit(@post).title.raw %></h2>
+
+
 Acknowledgements
 ----------------
 
