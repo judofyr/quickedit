@@ -8,11 +8,12 @@ class Quickedit
     # Sensible defaults:
     
     def self.find(type, id)
-      type.find(id)
+      constant = type.split("::").inject(Object) { |m, e| m.const_get(e) }
+      new(constant.find(id))
     end
     
     def type
-      instance.class
+      instance.class.name
     end
     
     def id
@@ -37,7 +38,7 @@ class Quickedit
       @adapters ||= []
     end
     
-    def self.find(instance)
+    def self.find_adapter(instance)
       adapter = adapters.reverse.detect { |a| a.matches?(instance) }
       
       if adapter.nil?
