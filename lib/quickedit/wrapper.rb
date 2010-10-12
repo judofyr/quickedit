@@ -10,7 +10,7 @@ class Quickedit
     end
     
     def adapter
-      @adapter ||= Quickedit::Adapter.find(@instance)
+      @adapter ||= Quickedit::Adapter.find_adapter(@instance)
     end
     
     def method_missing(key, *args, &blk)
