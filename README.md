@@ -21,6 +21,7 @@ Install the Quickedit gem:
     # Other frameworks:
     #   Install the gem:     `gem install quickedit`
     #   Add to your app:     require 'quickedit'
+    #   Add the middleare:   use Quickedit
     #   Include the helpers: include Quickedit::Helpers
 
 ### Step 2
