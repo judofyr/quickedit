@@ -15,9 +15,6 @@ Install the Quickedit gem:
     # Rails 3 (Bundler): Add to Gemfile
     gem "quickedit"
     
-    # Rails 2.3: Add to environment.rb:
-    config.gem "quickedit"
-    
     # Other frameworks:
     #   Install the gem:     `gem install quickedit`
     #   Add to your app:     require 'quickedit'
@@ -30,7 +27,7 @@ Enable Quickedit for some users:
 
     # Example for Rails 3
     class ApplicationController
-      before do
+      before_filter do
         # Enable for all users in this case
         env['quickedit.enable'] = true
       end
